@@ -15,6 +15,9 @@ public class CorsConfig {
             public void addCorsMappings(CorsRegistry registry) {
                 registry.addMapping("/**")
                         .allowedOrigins("*")
+                        .allowedOrigins("https://autocomplete-editor-frontend.onrender.com")
+                        .allowedHeaders("*")
+                        .allowCredentials(true)
                         .allowedMethods("GET", "POST", "PUT", "DELETE", "OPTIONS");
             }
         };
